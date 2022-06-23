@@ -1,0 +1,24 @@
+body{
+    background-color:hsl(217, 54%, 11%);
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+    font-family: Outfit;
+    padding: 20px;
+}
+
+.card h2 {
+    color: white;
+}
+
+.avatar{
+    border-width: 2px;
+    border-color: white;
+}
+
+.name {
+    color: white;
+}

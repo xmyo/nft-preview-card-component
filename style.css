@@ -1,24 +1,128 @@
-body{
-    background-color:hsl(217, 54%, 11%);
+
+:root {
+    /* Colors */
+    --color-primary: hsl(215, 51%, 70%);
+    --color-secondary: hsl(178, 100%, 50%);
+    --color-tertiary: hsl(216, 50%, 16%);
+    --color-accent: white;
+    --color-base: hsl(217, 54%, 11%);
 }
 
-.card {
-    background-color: hsl(216, 50%, 16%);
-    color: hsl(215, 51%, 70%);
+body {
+    background-color: var(--color-base);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.card {    
+    background-color: var(--color-tertiary);
+    border-radius: 12px;
+    color: var(--color-primary);
+    font-family: Outfit, normal;
     font-size: 18px;
+    font-weight: 300;
+    height: auto;
+    padding: 1.5em;
+    width: auto;
+    
+}
+
+.image-container {
+    position: relative;
+}
+
+.view-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    height: 300px;
+    width: 300px;
+    opacity: 0;    
+    background: center no-repeat url('./images/icon-view.svg'), hsla(178, 100%, 50%, 0.5);
+}
+
+.view-overlay:hover, .view-overlay:focus {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.primaryImg {
+    border-radius: 12px;
+    height: 300px;
+    width: 300px;  
+}
+
+.title {
+    color: var(--color-accent);
     font-family: Outfit;
-    padding: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 1.2em;
 }
 
-.card h2 {
-    color: white;
+.title:hover, .title:focus {
+    color: var(--color-secondary);
+    cursor: pointer;
 }
 
-.avatar{
-    border-width: 2px;
-    border-color: white;
+.subtitle {
+    font-family: Outfit, normal;
+    font-weight: 200;
+    margin-top: 1.3em;
+    margin-bottom: 1em;
+    width: 300px;
+}
+
+.about {    
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+    padding-top: 0.5em;
+}
+
+.icon {
+    padding-right: 4px;
+    vertical-align: -2px;
+}
+
+.value {
+    color: var(--color-secondary);
+    font-weight: 400;
+}
+
+.author {
+    align-items: center;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+    display: flex;
+    padding-top: 1.3em;
+    width: 300px;
+}
+
+.avatar {
+    border-radius: 100px;
+    border: 1px solid white;
+    height: 32px;
+    margin-right: 16px;
+    width: 32px;
 }
 
 .name {
-    color: white;
+    color: var(--color-accent);
+    margin-left: 8px;
+}
+
+.name:hover, .name:focus {
+    color:var(--color-secondary);
 }

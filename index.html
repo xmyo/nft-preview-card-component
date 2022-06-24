@@ -4,34 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="reset.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 
   <title>Frontend Mentor | NFT Card Component Challenge</title>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit" rel="stylesheet">
-
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
+  </style>
+  
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <img src="images/image-equilibrium.jpg">
-    <h2>Equlibrium #3429</h2>
-    <p>Our Equlibrium collection promotes balance and calm.</p>
-    <p>
-      <span class="ETH"><img src="images/icon-ethereum.svg">0.041ETH</span>
-      <span class="time"><img src="images/icon-clock.svg"> 3 days left</span>
-    </p>
-    <div class="author">
+  <article class="card">
+    <figure class="image-container">
+      <img class="primaryImg"
+      src="images/image-equilibrium.jpg"
+      alt="A image of a glass cube reflecting a colorful light">
+      <span class="view-overlay">    
+    </figure>
+    
+    <p class="title">Equlibrium #3429</p>
+    <p class="subtitle">Our Equlibrium collection promotes balance and calm.</p>
+
+    <section class="about">
+      <p class="value"><img class="icon" src="images/icon-ethereum.svg"> 0.041 ETH</p>
+      <p class="time"><img class="icon" src="images/icon-clock.svg"> 3 days left</p>
+    </section>
+
+    <section class="author">
       <img class="avatar"
             src="images/image-avatar.png"
-            alt="A photo of Jules. A young man, dark hair and light skin looking at the sun."
-            widht="40px"
-            height="40px">
-      <p> Creation of<span class="name">Jules Wyvern</span></p>
-    </div>
-  </div>
+            alt="A photo of Jules: a young man, dark hair and light skin with sun light on his face."> 
+      Creation of <a class="name" href="#">Jules Wyvern</a>
+    </section>
+  </article>
 </body>
 </html>
